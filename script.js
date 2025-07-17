@@ -1,23 +1,21 @@
-const textInput = document.getElementById('text-input');
-const charsWithSpaces = document.getElementById('chars-with-spaces');
-const charsNoSpaces = document.getElementById('chars-no-spaces');
-const wordCount = document.getElementById('word-count');
-const sentenceCount = document.getElementById('sentence-count');
+document.addEventListener('DOMContentLoaded', () => {
+    const orbits = document.querySelectorAll('.orbit');
 
-textInput.addEventListener('input', () => {
-    const text = textInput.value;
+    orbits.forEach(orbit => {
+        const planet = orbit.querySelector('.planet');
+        const duration = parseFloat(orbit.style.animationDuration) * 1000;
 
-    // Character count (with spaces)
-    charsWithSpaces.textContent = text.length;
+        let angle = Math.random() * 360;
 
-    // Character count (no spaces)
-    charsNoSpaces.textContent = text.replace(/\s/g, '').length;
+        function animatePlanet() {
+            angle = (angle + 360 / duration) % 360;
+            const x = Math.cos(angle * Math.PI / 180) * (orbit.offsetWidth / 2 - planet.offsetWidth / 2);
+            const y = Math.sin(angle * Math.PI / 180) * (orbit.offsetHeight / 2 - planet.offsetHeight / 2);
 
-    // Word count
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0);
-    wordCount.textContent = words.length;
+            planet.style.transform = `translate(${x}px, ${y}px)`;
 
-    // Sentence count
-    const sentences = text.split(/[.?!]/g).filter(sentence => sentence.trim().length > 0);
-    sentenceCount.textContent = sentences.length;
+            requestAnimationFrame(animatePlanet);
+        }
+
+    });
 });
