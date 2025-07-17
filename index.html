@@ -3,37 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solar System</title>
+    <title>Text Case Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="solar-system">
-        <div class="sun"></div>
-        <div class="orbit orbit-mercury">
-            <div class="planet mercury"></div>
-        </div>
-        <div class="orbit orbit-venus">
-            <div class="planet venus"></div>
-        </div>
-        <div class="orbit orbit-earth">
-            <div class="planet earth"></div>
-        </div>
-        <div class="orbit orbit-mars">
-            <div class="planet mars"></div>
-        </div>
-        <div class="orbit orbit-jupiter">
-            <div class="planet jupiter"></div>
-        </div>
-        <div class="orbit orbit-saturn">
-            <div class="planet saturn">
-                <div class="ring"></div>
-            </div>
-        </div>
-        <div class="orbit orbit-uranus">
-            <div class="planet uranus"></div>
-        </div>
-        <div class="orbit orbit-neptune">
-            <div class="planet neptune"></div>
+    <div class="container">
+        <h1>Text Case Converter</h1>
+        <textarea id="text-input" placeholder="Enter text here..."></textarea>
+        <div class="buttons">
+            <button id="title-case">Title Case</button>
+            <button id="upper-case">Upper Case</button>
+            <button id="lower-case">Lower Case</button>
+            <button id="sentence-case">Sentence Case</button>
+            <button id="capitalized-case">Capitalized Case</button>
+            <button id="toggle-case">Toggle Case</button>
+            <button id="inverse-case">Inverse Case</button>
+            <button id="kebab-case">Kebab Case</button>
+            <button id="snake-case">Snake Case</button>
+            <button id="camel-case">Camel Case</button>
+            <button id="pascal-case">Pascal Case</button>
         </div>
     </div>
     <script src="script.js"></script>
