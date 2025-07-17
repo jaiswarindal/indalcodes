@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Analyzer</title>
+    <title>Solar System</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Text Analyzer</h1>
-        <textarea id="text-input" placeholder="Type or paste your text here..."></textarea>
-        <div class="counters">
-            <div class="counter">
-                <p>Characters (with spaces): <span id="chars-with-spaces">0</span></p>
+    <div class="solar-system">
+        <div class="sun"></div>
+        <div class="orbit orbit-mercury">
+            <div class="planet mercury"></div>
+        </div>
+        <div class="orbit orbit-venus">
+            <div class="planet venus"></div>
+        </div>
+        <div class="orbit orbit-earth">
+            <div class="planet earth"></div>
+        </div>
+        <div class="orbit orbit-mars">
+            <div class="planet mars"></div>
+        </div>
+        <div class="orbit orbit-jupiter">
+            <div class="planet jupiter"></div>
+        </div>
+        <div class="orbit orbit-saturn">
+            <div class="planet saturn">
+                <div class="ring"></div>
             </div>
-            <div class="counter">
-                <p>Characters (no spaces): <span id="chars-no-spaces">0</span></p>
-            </div>
-            <div class="counter">
-                <p>Words: <span id="word-count">0</span></p>
-            </div>
-            <div class="counter">
-                <p>Sentences: <span id="sentence-count">0</span></p>
-            </div>
+        </div>
+        <div class="orbit orbit-uranus">
+            <div class="planet uranus"></div>
+        </div>
+        <div class="orbit orbit-neptune">
+            <div class="planet neptune"></div>
         </div>
     </div>
     <script src="script.js"></script>
